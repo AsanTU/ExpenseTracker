@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginScreenFragment">
+
+    <fragment
+        android:id="@+id/loginScreenFragment"
+        android:name="com.example.expensetracker.LoginScreenFragment"
+        android:label="fragment_login_screen"
+        tools:layout="@layout/fragment_login_screen" >
+        <action
+            android:id="@+id/action_loginScreenFragment_to_listOfExpensesFragment"
+            app:destination="@id/listOfExpensesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/listOfExpensesFragment"
+        android:name="com.example.expensetracker.ListOfExpensesFragment"
+        android:label="fragment_list_of_expenses"
+        tools:layout="@layout/fragment_list_of_expenses" >
+        <action
+            android:id="@+id/action_listOfExpensesFragment_to_addEditExpenseFragment"
+            app:destination="@id/addEditExpenseFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_listOfExpensesFragment_to_currencyConversionFragment"
+            app:destination="@id/currencyConversionFragment"/>
+        <action
+            android:id="@+id/action_listOfExpensesFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_listOfExpensesFragment_to_syncFragment"
+            app:destination="@id/syncFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditExpenseFragment"
+        android:name="com.example.expensetracker.AddEditExpenseFragment"
+        android:label="fragment_add_edit_expense"
+        tools:layout="@layout/fragment_add_edit_expense" />
+    <fragment
+        android:id="@+id/currencyConversionFragment"
+        android:name="com.example.expensetracker.CurrencyConversionFragment"
+        android:label="fragment_currency_conversion"
+        tools:layout="@layout/fragment_currency_conversion" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.expensetracker.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/syncFragment"
+        android:name="com.example.expensetracker.SyncFragment"
+        android:label="fragment_sync"
+        tools:layout="@layout/fragment_sync" />
+</navigation>
