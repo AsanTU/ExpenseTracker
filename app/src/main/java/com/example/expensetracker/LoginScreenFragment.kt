@@ -64,6 +64,7 @@ class LoginScreenFragment : Fragment() {
             false
         }
     }
+
     private fun onClickElements() {
         auth = FirebaseAuth.getInstance()
         binding.loginBtn.setOnClickListener { loginUser() }
