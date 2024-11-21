@@ -10,13 +10,13 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import com.example.expensetracker.databinding.FragmentLoginScreenBinding
+import com.example.expensetracker.databinding.FragmentListOfExpensesBinding
 import com.google.android.material.animation.AnimationUtils
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginScreenFragment : Fragment() {
 
-    private var _binding: FragmentLoginScreenBinding? = null
+    private var _binding: FragmentListOfExpensesBinding? = null
     private val binding get() = _binding!!
     private lateinit var auth: FirebaseAuth
 
